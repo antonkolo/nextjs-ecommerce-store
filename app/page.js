@@ -1,13 +1,8 @@
-import Image from 'next/image';
-import styles from './page.module.css';
+import { getAllRecords } from '../data/records';
+import RecordsList from './components/recordsList';
 
 export default function Home() {
-  return (
-    <>
-      <h1>Records in stock</h1>
-      <ul>
-        <li>Nirvana - In Utero</li>
-      </ul>
-    </>
-  );
+  const records = getAllRecords();
+  console.log(records);
+  return <RecordsList records={records} />;
 }
