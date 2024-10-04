@@ -1,4 +1,4 @@
-import { getAllRecords } from '../data/records';
+import { getAllRecords } from '../database/records';
 import RecordsList from './components/recordsList';
 
 export default function Home() {

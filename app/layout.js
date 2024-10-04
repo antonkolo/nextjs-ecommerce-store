@@ -1,3 +1,4 @@
+import './globals.scss';
 import Header from './components/header.js';
 
 export const metadata = {

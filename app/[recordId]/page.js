@@ -1,5 +1,5 @@
 import React from 'react';
-import { getRecord } from '../../data/records';
+import { getRecord } from '../../database/records';
 
 export default function ProductPage(props) {
   console.log(props);

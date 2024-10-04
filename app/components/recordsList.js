@@ -7,7 +7,7 @@ export default function RecordsList(props) {
         return (
           <li key={`record-${record.id}`}>
             <div>
-              <h1>{record.title}</h1>
+              <h2>{record.title}</h2>
             </div>
           </li>
         );
