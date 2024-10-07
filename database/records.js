@@ -10,11 +10,13 @@
 const records = [
   {
     id: 1,
-    title: 'LOST & FOUND EP',
+    title: 'Lost & Found EP',
     artist: 'Solar Plexus',
     label: 'Opia Records',
+    year: '2024',
     price: '15',
     description: 'fresh 4 tracker on Opia be fast',
+    genres: ['Progressive House', 'Trance'],
     tracks: [
       { title: 'Full Tilt (Full On Mix)', snippet: 'mp3' },
       { title: 'Hush', snippet: 'mp3' },

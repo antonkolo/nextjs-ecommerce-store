@@ -13,6 +13,7 @@ This fullstack applicationo is meant as a learning project to get comfortable us
 
 ## Technologies
 
+- designed in figma
 - reacts.js
 - next.js
 - scss

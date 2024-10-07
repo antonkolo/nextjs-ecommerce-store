@@ -1,0 +1,25 @@
+@use '../styles/mixins';
+@import '../styles/variables';
+
+.records-list {
+  max-width: $max-width;
+  margin: 72px auto;
+}
+
+.record {
+  height: 128px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $black;
+  box-shadow: 0 6px 3.5px $opaque-black;
+}
+
+.record-info-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.record-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}

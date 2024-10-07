@@ -4,6 +4,8 @@
 .header {
   height: 160px;
   background: linear-gradient($yellow-transparent, $transparent);
+  position: sticky;
+  top: 0;
 
   .nav {
     display: flex;
@@ -14,6 +16,11 @@
     .title {
       font-size: 6rem;
       font-weight: bold;
+      font-family: var(--font-rubik-scribble);
+
+      &:active {
+        color: $yellow;
+      }
     }
 
     .cart-container {

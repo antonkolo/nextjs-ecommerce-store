@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import cartIcon from '../../public/svg/cart-icon.svg';
 import logo from '../../public/svg/logo.svg';
-import styles from './header.module.scss';
+import styles from './Header.module.scss';
 
 export default function Header() {
   return (
@@ -16,7 +16,9 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <h1 className={styles.title}>CRATE</h1>
+            <Link href="/">
+              <h1 className={styles.title}>CRATE</h1>
+            </Link>
           </li>
           <li>
             <Link href="/cart">

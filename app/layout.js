@@ -1,6 +1,14 @@
 import './globals.scss';
-import { Inter } from 'next/font/google';
-import Header from './components/header.js';
+import { Inter, Rubik_Scribble } from 'next/font/google';
+import Header from './components/Header';
+
+// Font files can be colocated inside of `app`
+const rubikScribble = Rubik_Scribble({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-rubik-scribble',
+  weight: ['400'],
+});
 
 const inter = Inter({
   subsets: ['latin'],
@@ -15,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${rubikScribble.variable}`}>
       <body>
         <Header />
         {children}
