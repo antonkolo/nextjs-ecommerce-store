@@ -17,6 +17,7 @@ const records = [
     price: '15',
     description: 'fresh 4 tracker on Opia be fast',
     genres: ['Progressive House', 'Trance'],
+    soundcloudLink: 'soundcloud.com',
     tracks: [
       { title: 'Full Tilt (Full On Mix)', snippet: 'mp3' },
       { title: 'Hush', snippet: 'mp3' },
@@ -33,6 +34,7 @@ const records = [
     price: '15',
     description: 'fresh 4 tracker on Opia be fast',
     genres: ['Progressive House', 'Trance'],
+    soundcloudLink: 'soundcloud.com',
     tracks: [
       { title: 'Full Tilt (Full On Mix)', snippet: 'mp3' },
       { title: 'Hush', snippet: 'mp3' },
@@ -49,6 +51,7 @@ const records = [
     price: '15',
     description: 'fresh 4 tracker on Opia be fast',
     genres: ['Progressive House', 'Trance'],
+    soundcloudLink: 'soundcloud.com',
     tracks: [
       { title: 'Full Tilt (Full On Mix)', snippet: 'mp3' },
       { title: 'Hush', snippet: 'mp3' },

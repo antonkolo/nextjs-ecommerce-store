@@ -12,7 +12,7 @@ export default function Header() {
         <ul className={styles.nav}>
           <li>
             <Link href="/">
-              <Image className={styles.logo} src={logo} />
+              <Image src={logo} alt="Logo" />
             </Link>
           </li>
           <li>
@@ -23,7 +23,7 @@ export default function Header() {
           <li>
             <Link href="/cart">
               <div className={styles['cart-container']}>
-                <Image src={cartIcon} />
+                <Image src={cartIcon} alt="Cart icon" />
                 <span className={styles.itemsCounter}>1</span>
               </div>
             </Link>

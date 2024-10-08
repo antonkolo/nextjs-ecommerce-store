@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import styles from './RecordsList.module.scss';
 
@@ -9,13 +10,24 @@ export default function RecordsList(props) {
         return (
           <li key={`record-${record.id}`} className={styles.record}>
             <div className={styles['record-info-wrapper']}>
-              <Image
-                width={128}
-                height={128}
-                src={`/product-images/product-image-${record.id.toString()}.jpg`}
-              />
+              <Link
+                href={`/${record.id}`}
+                data-test-id={`data-test-id="product-${record.id}`}
+              >
+                <Image
+                  width={128}
+                  height={128}
+                  src={`/product-images/product-image-${record.id.toString()}.jpg`}
+                />
+              </Link>
+
               <div className={styles['record-name-wrapper']}>
-                <h2 className={styles['record-title']}>{record.title}</h2>
+                <Link
+                  href={`/${record.id}`}
+                  data-test-id={`data-test-id="product-${record.id}`}
+                >
+                  <h2 className={styles['record-title']}>{record.title}</h2>
+                </Link>
                 <p className={styles['record-artist']}>{record.artist}</p>
                 <p className={styles['record-year']}>{record.year}</p>
               </div>

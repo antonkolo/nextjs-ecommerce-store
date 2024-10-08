@@ -1,5 +1,11 @@
 @import '../styles/variables';
 
+@mixin page-wrapper {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;

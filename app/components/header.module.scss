@@ -13,11 +13,6 @@
     align-items: center;
     padding: 0 40px;
 
-    .logo {
-      &:hover {
-        @include mixins.lift-on-hover;
-      }
-    }
     .title {
       font-size: 6rem;
       font-weight: bold;
@@ -35,6 +30,11 @@
       border-radius: 50%;
       border: 1px solid $black;
       position: relative;
+
+      &:hover {
+        border: 1px dashed $black;
+        rotate: -5deg;
+      }
     }
 
     .itemsCounter {
