@@ -24,6 +24,38 @@ const records = [
       { title: 'Angara Dub', snippet: 'mp3' },
     ],
   },
+  {
+    id: 1,
+    title: 'Lost & Found EP',
+    artist: 'Solar Plexus',
+    label: 'Opia Records',
+    year: '2024',
+    price: '15',
+    description: 'fresh 4 tracker on Opia be fast',
+    genres: ['Progressive House', 'Trance'],
+    tracks: [
+      { title: 'Full Tilt (Full On Mix)', snippet: 'mp3' },
+      { title: 'Hush', snippet: 'mp3' },
+      { title: 'Shanti', snippet: 'mp3' },
+      { title: 'Angara Dub', snippet: 'mp3' },
+    ],
+  },
+  {
+    id: 1,
+    title: 'Lost & Found EP',
+    artist: 'Solar Plexus',
+    label: 'Opia Records',
+    year: '2024',
+    price: '15',
+    description: 'fresh 4 tracker on Opia be fast',
+    genres: ['Progressive House', 'Trance'],
+    tracks: [
+      { title: 'Full Tilt (Full On Mix)', snippet: 'mp3' },
+      { title: 'Hush', snippet: 'mp3' },
+      { title: 'Shanti', snippet: 'mp3' },
+      { title: 'Angara Dub', snippet: 'mp3' },
+    ],
+  },
 ];
 
 export function getRecord(recordId) {

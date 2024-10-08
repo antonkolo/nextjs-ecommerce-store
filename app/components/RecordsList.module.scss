@@ -4,6 +4,9 @@
 .records-list {
   max-width: $max-width;
   margin: 72px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .record {
@@ -12,14 +15,80 @@
   justify-content: space-between;
   border: 1px solid $black;
   box-shadow: 0 6px 3.5px $opaque-black;
+  transition: all 0.5s ease-in-out;
+
+  img {
+    max-height: 100%;
+  }
+
+  &:hover {
+    @include mixins.lift-on-hover;
+  }
 }
 
 .record-info-wrapper {
   display: flex;
   gap: 2rem;
+
+  .record-name-wrapper {
+    @include mixins.card-padding;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    .record-title {
+      font-size: $text-medium;
+      font-weight: 700;
+    }
+
+    .record-artist {
+      font-size: $text-medium;
+    }
+  }
+
+  .record-year {
+    margin-top: auto;
+  }
 }
 
-.record-title {
-  font-size: 1.5rem;
-  font-weight: 700;
+.genre-wrapper {
+  @include mixins.card-padding;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  max-width: 300px;
+  display: flex;
+  gap: 1rem;
+
+  .genre-tag {
+    opacity: 0.7;
+  }
+}
+
+.record-price-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  justify-content: space-between;
+
+  .price {
+    @include mixins.card-padding;
+    text-align: right;
+    font-size: $text-medium;
+  }
+
+  .button {
+    cursor: pointer;
+    padding: 0.75rem 3rem;
+    border: 1px solid $black;
+    border-bottom: none;
+    border-right: none;
+    background-color: $yellow;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:active {
+      padding: 0.7rem 2.9rem;
+      filter: saturate(150%);
+    }
+  }
 }

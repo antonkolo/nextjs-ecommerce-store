@@ -10,24 +10,29 @@ export default function RecordsList(props) {
           <li key={`record-${record.id}`} className={styles.record}>
             <div className={styles['record-info-wrapper']}>
               <Image
-                width="128"
-                height="128"
+                width={128}
+                height={128}
                 src={`/product-images/product-image-${record.id.toString()}.jpg`}
               />
-              <div>
+              <div className={styles['record-name-wrapper']}>
                 <h2 className={styles['record-title']}>{record.title}</h2>
-                <p>{record.artist}</p>
-                <p>{record.year}</p>
+                <p className={styles['record-artist']}>{record.artist}</p>
+                <p className={styles['record-year']}>{record.year}</p>
               </div>
-              <div>
+              <div className={styles['genre-wrapper']}>
                 {record.genres.map((genre) => {
-                  return <p key={`${genre}-1`}>{`# ${genre}`}</p>;
+                  return (
+                    <p
+                      className={styles['genre-tag']}
+                      key={`${genre}-1`}
+                    >{`# ${genre}`}</p>
+                  );
                 })}
               </div>
             </div>
-            <div>
-              <p>{record.price}</p>
-              <button>Add</button>
+            <div className={styles['record-price-button-wrapper']}>
+              <p className={styles.price}>{record.price} $</p>
+              <button className={styles.button}>Add to cart</button>
             </div>
           </li>
         );

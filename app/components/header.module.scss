@@ -13,6 +13,11 @@
     align-items: center;
     padding: 0 40px;
 
+    .logo {
+      &:hover {
+        @include mixins.lift-on-hover;
+      }
+    }
     .title {
       font-size: 6rem;
       font-weight: bold;
