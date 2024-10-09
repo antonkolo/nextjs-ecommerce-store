@@ -1,7 +1,46 @@
 @use '../styles/mixins';
 @import '../styles/variables';
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  max-height: 60px;
+}
+
 .controls-wrapper {
-  width: 210;
+  width: 40%;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 210px;
+  border: solid 1px $black;
+  padding: 0.5rem;
+
+  .quantity-input {
+    font-size: 3rem;
+    background: $white;
+    border: none;
+    width: 4rem;
+    text-align: center;
+  }
+
+  button {
+    background: $white;
+    border: none;
+    font-size: 2rem;
+
+    &:hover {
+      opacity: 0.2;
+      cursor: pointer;
+    }
+  }
+}
+
+.button-add {
+  flex-basis: 210px;
+  background-color: $yellow;
+  border: 1px solid $black;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
 }

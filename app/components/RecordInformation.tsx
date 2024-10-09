@@ -20,10 +20,8 @@ export default function RecordInformation(props: Props) {
       </div>
 
       <p>{record.description}</p>
-      <div className={styles['controls-wrapper']}>
-        <QuantityControls />
-        <button>Add to cart</button>
-      </div>
+
+      <QuantityControls />
     </div>
   );
 }

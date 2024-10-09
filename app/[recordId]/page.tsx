@@ -12,18 +12,27 @@ export default async function ProductPage(props: Props) {
   const params = await props.params;
 
   const record = getRecord(Number(params.recordId));
-
-  return (
-    <div className={styles.wrapper}>
-      <article className={styles['record-card']}>
-        <Image
-          alt="Record sleeve photo"
-          width={440}
-          height={440}
-          src={`/product-images/product-image-${record?.id.toString()}.jpg`}
-        />
-        <RecordInformation record={record} />
-      </article>
-    </div>
-  );
+  if (record) {
+    return (
+      <div className={styles.wrapper}>
+        <article className={styles['record-card']}>
+          <div className={styles['flex-item']}>
+            <div className={styles['image-wrapper']}>
+              <Image
+                layout="responsive"
+                className={styles.image}
+                alt="Record sleeve photo"
+                src={`/product-images/product-image-${record.id.toString()}.jpg`}
+                width={440}
+                height={440}
+              />
+            </div>
+          </div>
+          <RecordInformation record={record} />
+        </article>
+      </div>
+    );
+  } else {
+    return <div>Error</div>;
+  }
 }
