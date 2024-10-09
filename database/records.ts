@@ -18,12 +18,6 @@ const records = [
     description: 'fresh 4 tracker on Opia be fast',
     genres: ['Progressive House', 'Trance'],
     soundcloudLink: 'soundcloud.com',
-    tracks: [
-      { title: 'Full Tilt (Full On Mix)', snippet: 'mp3' },
-      { title: 'Hush', snippet: 'mp3' },
-      { title: 'Shanti', snippet: 'mp3' },
-      { title: 'Angara Dub', snippet: 'mp3' },
-    ],
   },
   {
     id: 1,
@@ -35,12 +29,6 @@ const records = [
     description: 'fresh 4 tracker on Opia be fast',
     genres: ['Progressive House', 'Trance'],
     soundcloudLink: 'soundcloud.com',
-    tracks: [
-      { title: 'Full Tilt (Full On Mix)', snippet: 'mp3' },
-      { title: 'Hush', snippet: 'mp3' },
-      { title: 'Shanti', snippet: 'mp3' },
-      { title: 'Angara Dub', snippet: 'mp3' },
-    ],
   },
   {
     id: 1,
@@ -52,16 +40,10 @@ const records = [
     description: 'fresh 4 tracker on Opia be fast',
     genres: ['Progressive House', 'Trance'],
     soundcloudLink: 'soundcloud.com',
-    tracks: [
-      { title: 'Full Tilt (Full On Mix)', snippet: 'mp3' },
-      { title: 'Hush', snippet: 'mp3' },
-      { title: 'Shanti', snippet: 'mp3' },
-      { title: 'Angara Dub', snippet: 'mp3' },
-    ],
   },
 ];
 
-export function getRecord(recordId) {
+export function getRecord(recordId: number) {
   return records.find((record) => record.id === recordId);
 }
 

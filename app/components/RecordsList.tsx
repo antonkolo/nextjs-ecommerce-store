@@ -3,7 +3,20 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './RecordsList.module.scss';
 
-export default function RecordsList(props) {
+type Props = {
+  records: {
+    id: number;
+    title: string;
+    artist: string;
+    year: string;
+    price: string;
+    description: string;
+    genres: string[];
+    soundcloudLink: string;
+  }[];
+};
+
+export default function RecordsList(props: Props) {
   return (
     <ul className={styles['records-list']}>
       {props.records.map((record) => {
@@ -15,6 +28,7 @@ export default function RecordsList(props) {
                 data-test-id={`data-test-id="product-${record.id}`}
               >
                 <Image
+                  alt="Record sleeve photo"
                   width={128}
                   height={128}
                   src={`/product-images/product-image-${record.id.toString()}.jpg`}
