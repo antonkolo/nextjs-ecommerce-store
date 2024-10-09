@@ -3,17 +3,19 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './RecordsList.module.scss';
 
-type Props = {
-  records: {
-    id: number;
-    title: string;
-    artist: string;
-    year: string;
-    price: string;
-    description: string;
-    genres: string[];
-    soundcloudLink: string;
-  }[];
+export type Record = {
+  id: number;
+  title: string;
+  artist: string;
+  year: string;
+  price: string;
+  description: string;
+  genres: string[];
+  soundcloudLink: string;
+};
+
+export type Props = {
+  records: Record[];
 };
 
 export default function RecordsList(props: Props) {

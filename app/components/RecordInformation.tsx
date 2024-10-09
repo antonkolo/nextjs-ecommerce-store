@@ -1,7 +1,13 @@
 import React from 'react';
+import QuantityControls from './QuantityControls';
 import styles from './RecordInformation.module.scss';
+import { Record } from './RecordsList';
 
-export default function RecordInformation(props) {
+type Props = {
+  record: Record;
+};
+
+export default function RecordInformation(props: Props) {
   const record = props.record;
   return (
     <div className={styles['record-information']}>
@@ -15,7 +21,7 @@ export default function RecordInformation(props) {
 
       <p>{record.description}</p>
       <div className={styles['controls-wrapper']}>
-        <div>- 1 +</div>
+        <QuantityControls />
         <button>Add to cart</button>
       </div>
     </div>
