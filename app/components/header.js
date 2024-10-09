@@ -17,7 +17,7 @@ export default function Header() {
           </li>
           <li>
             <Link href="/">
-              <h1 className={styles.title}>CRATE</h1>
+              <div className={styles.title}>CRATE</div>
             </Link>
           </li>
           <li>

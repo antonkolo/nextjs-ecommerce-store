@@ -9,14 +9,14 @@ export default function ProductPage(props) {
 
   return (
     <div className={styles.wrapper}>
-      <section className={styles.section}>
+      <article className={styles['record-card']}>
         <Image
           width={440}
           height={440}
           src={`/product-images/product-image-${record.id.toString()}.jpg`}
         />
-        <RecordInformation />
-      </section>
+        <RecordInformation record={record} />
+      </article>
     </div>
   );
 }
