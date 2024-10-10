@@ -16,17 +16,13 @@ export default async function ProductPage(props: Props) {
     return (
       <div className={styles.wrapper}>
         <article className={styles['record-card']}>
-          <div className={styles['flex-item']}>
-            <div className={styles['image-wrapper']}>
-              <Image
-                layout="responsive"
-                className={styles.image}
-                alt="Record sleeve photo"
-                src={`/product-images/product-image-${record.id.toString()}.jpg`}
-                width={440}
-                height={440}
-              />
-            </div>
+          <div className={styles['image-wrapper']}>
+            <Image
+              alt="Record sleeve photo"
+              src={`/product-images/product-image-${record.id.toString()}.jpg`}
+              width={440}
+              height={440}
+            />
           </div>
           <RecordInformation record={record} />
         </article>

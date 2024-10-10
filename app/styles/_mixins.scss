@@ -4,6 +4,9 @@
   max-width: 1130px;
   margin: 0 auto;
   padding-top: 70px;
+  @media (max-width: $breakpoint-tablet) {
+    padding: 0;
+  }
 }
 
 @mixin flex-center {

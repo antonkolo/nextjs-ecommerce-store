@@ -7,6 +7,10 @@
   position: sticky;
   top: 0;
 
+  @media (max-width: $breakpoint-tablet) {
+    height: 80px;
+  }
+
   .nav {
     display: flex;
     justify-content: space-between;
@@ -17,6 +21,10 @@
       font-size: 6rem;
       font-weight: bold;
       font-family: var(--font-rubik-scribble);
+
+      @media (max-width: $breakpoint-tablet) {
+        display: none;
+      }
 
       &:active {
         color: $yellow;
