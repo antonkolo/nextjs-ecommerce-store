@@ -12,7 +12,7 @@ export default function Header() {
         <ul className={styles.nav}>
           <li>
             <Link href="/">
-              <Image src={logo} alt="Logo" />
+              <Image src={logo} alt="Logo" className={styles.logo} />
             </Link>
           </li>
           <li>

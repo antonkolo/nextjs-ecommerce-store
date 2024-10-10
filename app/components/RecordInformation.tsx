@@ -11,7 +11,7 @@ export default function RecordInformation(props: Props) {
   const record = props.record;
   return (
     <div className={styles['record-information']}>
-      <div>
+      <div className={styles['title-price-wrapper']}>
         <div>
           <h1>{record.title}</h1>
           <strong>{record.artist}</strong>

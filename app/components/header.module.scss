@@ -44,6 +44,16 @@
         border: 1px dashed $black;
         rotate: -5deg;
       }
+
+      @media (max-width: $breakpoint-tablet) {
+        width: 64px;
+        height: 64px;
+
+        img {
+          width: 48px;
+          height: 48px;
+        }
+      }
     }
 
     .itemsCounter {
@@ -56,6 +66,19 @@
       color: $white;
       background-color: $red;
       border-radius: 50%;
+
+      @media (max-width: $breakpoint-tablet) {
+        width: 16px;
+        height: 16px;
+        top: 10px;
+        right: 6px;
+      }
     }
+  }
+}
+
+.logo {
+  @media (max-width: $breakpoint-tablet) {
+    width: 96px;
   }
 }

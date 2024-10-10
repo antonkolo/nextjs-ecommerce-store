@@ -6,6 +6,10 @@
   justify-content: space-between;
   margin-top: auto;
   max-height: 60px;
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 .controls-wrapper {
@@ -16,6 +20,11 @@
   flex-basis: 210px;
   border: solid 1px $black;
   padding: 0.5rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-basis: auto;
+    width: 100%;
+  }
 
   .quantity-input {
     font-size: 3rem;

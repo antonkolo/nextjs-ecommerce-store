@@ -3,7 +3,7 @@
 @mixin page-wrapper {
   max-width: 1130px;
   margin: 0 auto;
-  padding-top: 70px;
+  padding-top: 2rem;
   @media (max-width: $breakpoint-tablet) {
     padding: 0;
   }
