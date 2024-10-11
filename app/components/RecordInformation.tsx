@@ -1,5 +1,6 @@
 import React from 'react';
 import QuantityControls from './QuantityControls';
+import Player from './ReactPlayer';
 import styles from './RecordInformation.module.scss';
 import { Record } from './RecordsList';
 
@@ -20,7 +21,7 @@ export default function RecordInformation(props: Props) {
       </div>
 
       <p>{record.description}</p>
-
+      <Player />
       <QuantityControls />
     </div>
   );

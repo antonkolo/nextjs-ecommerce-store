@@ -19,7 +19,7 @@ export default async function ProductPage(props: Props) {
           <div className={styles['image-wrapper']}>
             <Image
               alt="Record sleeve photo"
-              src={`/product-images/product-image-${record.id.toString()}.jpg`}
+              src={`/product-images/product-image-${record.id.toString()}.webp`}
               width={440}
               height={440}
             />

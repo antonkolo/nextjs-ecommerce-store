@@ -18,7 +18,25 @@ This fullstack applicationo is meant as a learning project to get comfortable us
 - next.js
 - scss
 - css modules
-- postgres sql (database)
+- postgres.js (database)
+
+## Setup
+
+### Database Setup
+
+```sql
+postgres=# CREATE DATABASE nextjs_ecommerce_store;
+CREATE DATABASE
+postgres=# CREATE USER nextjs_ecommerce_store WITH ENCRYPTED PASSWORD 'nextjs_ecommerce_store';
+CREATE ROLE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE nextjs_ecommerce_store TO nextjs_ecommerce_store;
+GRANT
+postgres=# \connect nextjs_ecommerce_store
+You are now connected to database "nextjs_ecommerce_store" as user "anton.kolomoiets".
+nextjs_ecommerce_store=# CREATE SCHEMA nextjs_ecommerce_store AUTHORIZATION nextjs_ecommerce_store;
+CREATE SCHEMA
+\q
+```
 
 ## References
 

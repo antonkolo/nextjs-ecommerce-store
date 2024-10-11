@@ -50,3 +50,5 @@ export function getRecord(recordId: number) {
 export function getAllRecords() {
   return records;
 }
+
+// nextjs_ecommerce_store

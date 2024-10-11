@@ -33,7 +33,7 @@ export default function RecordsList(props: Props) {
                   alt="Record sleeve photo"
                   width={128}
                   height={128}
-                  src={`/product-images/product-image-${record.id.toString()}.jpg`}
+                  src={`/product-images/product-image-${record.id.toString()}.webp`}
                 />
               </Link>
 
