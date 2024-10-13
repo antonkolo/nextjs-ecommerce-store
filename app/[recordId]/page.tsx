@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { getRecord } from '../../database/records';
+import { getRecordInsecure } from '../../database/records';
 import RecordInformation from '../components/RecordInformation';
 import styles from './page.module.scss';
 
@@ -11,7 +11,7 @@ type Props = {
 export default async function ProductPage(props: Props) {
   const params = await props.params;
 
-  const record = getRecord(Number(params.recordId));
+  const record = await getRecordInsecure(Number(params.recordId));
   if (record) {
     return (
       <div className={styles.wrapper}>

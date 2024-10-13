@@ -7,11 +7,11 @@ export type Record = {
   id: number;
   title: string;
   artist: string;
-  year: string;
+  label: string;
+  releaseYear: string | null;
   price: string;
-  description: string;
-  genres: string[];
-  soundcloudLink: string;
+  description: string | null;
+  soundcloudLink: string | null;
 };
 
 export type Props = {
@@ -45,17 +45,17 @@ export default function RecordsList(props: Props) {
                   <h2 className={styles['record-title']}>{record.title}</h2>
                 </Link>
                 <p className={styles['record-artist']}>{record.artist}</p>
-                <p className={styles['record-year']}>{record.year}</p>
+                <p className={styles['record-year']}>{record.releaseYear}</p>
               </div>
               <div className={styles['genre-wrapper']}>
-                {record.genres.map((genre) => {
+                {/* {record.genres?.map((genre) => {
                   return (
                     <p
                       className={styles['genre-tag']}
                       key={`${genre}-1`}
                     >{`# ${genre}`}</p>
                   );
-                })}
+                })} */}
               </div>
             </div>
             <div className={styles['record-price-button-wrapper']}>

@@ -1,7 +1,9 @@
-import { getAllRecords } from '../database/records';
-import RecordsList from './components/RecordsList';
+import { RowList } from 'postgres';
+import { getAllRecordsInsecure } from '../database/records';
+import RecordsList, { Record } from './components/RecordsList';
 
-export default function Home() {
-  const records = getAllRecords();
+export default async function Home() {
+  const records: RowList<Record[]> = await getAllRecordsInsecure();
+
   return <RecordsList records={records} />;
 }

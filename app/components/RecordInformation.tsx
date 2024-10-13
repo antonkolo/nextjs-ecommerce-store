@@ -21,7 +21,10 @@ export default function RecordInformation(props: Props) {
       </div>
 
       <p>{record.description}</p>
-      <Player />
+      {/* render player  */}
+      {record.soundcloudLink && (
+        <Player soundcloudLink={record.soundcloudLink} />
+      )}
       <QuantityControls />
     </div>
   );
