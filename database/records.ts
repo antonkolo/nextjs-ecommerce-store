@@ -2,21 +2,6 @@ import { cache } from 'react';
 import { Record } from '../app/components/RecordsList';
 import { sql } from './connect';
 
-// const records = [
-//   {
-//     title: 'Lost & Found EP',
-//     artist: 'Solar Plexus',
-//     label: 'Opia Records',
-//     releaseYear: '2024',
-//     price: '15',
-//     description: 'fresh 4 tracker on Opia be fast',
-//     genres: ['Progressive House', 'Trance'],
-//     soundcloudLink:
-//       'https://soundcloud.com/torture-the-artist/exclusive-solar-plexus-beautifulyaknow-opia-records',
-//   },
-//   {},
-// ];
-
 export const getRecordInsecure = cache(async (recordId: Record['id']) => {
   const [record] = await sql<Record[]>`
     SELECT

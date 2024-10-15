@@ -1,3 +1,5 @@
+@import './styles/variables';
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +8,10 @@
 
 html {
   font-family: var(--font-inter);
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 14px;
+  }
 }
 
 li {
