@@ -21,6 +21,8 @@ export default function CartItem({ record }: { record: Record }) {
     <div>
       <div>
         <Image
+          width={210}
+          height={210}
           alt="Record sleeve photo"
           src={`/product-images/product-image-${record.id.toString()}.webp`}
         />

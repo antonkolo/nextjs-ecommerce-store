@@ -25,7 +25,7 @@ export default function RecordInformation(props: Props) {
       {record.soundcloudLink && (
         <Player soundcloudLink={record.soundcloudLink} />
       )}
-      <QuantityControls />
+      <QuantityControls recordId={record.id} />
     </div>
   );
 }
