@@ -18,7 +18,7 @@ import { sql } from './connect';
 // ];
 
 export const getRecordInsecure = cache(async (recordId: Record['id']) => {
-  const records = await sql<Record[]>`
+  const [record] = await sql<Record[]>`
     SELECT
       *
     FROM
@@ -26,7 +26,7 @@ export const getRecordInsecure = cache(async (recordId: Record['id']) => {
     WHERE
       id = ${recordId}
   `;
-  return records[0];
+  return record;
 });
 
 export const getAllRecordsInsecure = cache(async () => {

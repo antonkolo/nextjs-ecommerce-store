@@ -29,6 +29,6 @@ export default async function ProductPage(props: Props) {
       </div>
     );
   } else {
-    return <div>Error</div>;
+    return <div>Record not found</div>;
   }
 }

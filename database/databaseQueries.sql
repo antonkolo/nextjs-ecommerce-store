@@ -11,7 +11,8 @@ GRANT ALL privileges ON database nextjs_ecommerce_store TO nextjs_ecommerce_stor
 -- create a schema
 CREATE SCHEMA nextjs_ecommerce_store AUTHORIZATION nextjs_ecommerce_store;
 
--- psql, login as user: psql -U nextjs_ecommerce_store
+-- psql: login as user: psql -U nextjs_ecommerce_store
+-- psql: connect to database:  \connect nextjs_ecommerce_store
 -- create table
 CREATE TABLE records (
   id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -51,5 +52,5 @@ VALUES
     '2024',
     15,
     'fresh 4 tracker on Opia be fast',
-    'https://soundcloud.com/torture-the-artist/exclusive-solar-plexus-beautifulyaknow-opia-records',
+    'https://soundcloud.com/torture-the-artist/exclusive-solar-plexus-beautifulyaknow-opia-records'
   );
