@@ -1,6 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { addRecordToCart } from '../../util/cookies';
 import styles from './RecordsList.module.scss';
 
 export type Record = {
@@ -60,7 +63,14 @@ export default function RecordsList(props: Props) {
             </div>
             <div className={styles['record-price-button-wrapper']}>
               <p className={styles.price}>{record.price} $</p>
-              <button className={styles.button}>Add to cart</button>
+              <button
+                className={styles.button}
+                onClick={async () => {
+                  await addRecordToCart(record.id, 1);
+                }}
+              >
+                Add to cart
+              </button>
             </div>
           </li>
         );

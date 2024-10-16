@@ -1,4 +1,4 @@
-import 'server-only';
+// import 'server-only';
 import { config } from 'dotenv-safe';
 import postgres, { Sql } from 'postgres';
 import { postgresConfig } from '../util/config';

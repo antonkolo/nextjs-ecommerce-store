@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { addRecordToCart } from '../[recordId]/actions';
+import { addRecordToCart } from '../../util/cookies';
 import styles from './QuantityControls.module.scss';
 
 export default function QuantityControls({ recordId }: { recordId: number }) {

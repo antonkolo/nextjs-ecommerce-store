@@ -1,23 +1,15 @@
-import { cookies } from 'next/headers';
 import React from 'react';
-import { getRecordInsecure } from '../../database/records';
-import CartItem from '../components/CartItem';
-import { Record } from '../components/RecordsList';
-
-type ReturnedRecord = Record | undefined;
+import { getCartItems } from '../../util/cookies';
+import hydrateCart from '../../util/hydrateCart';
+import CartItemsList from '../components/CartItemsList';
 
 export default async function CartPage() {
-  const record: ReturnedRecord = await getRecordInsecure(1);
-  const cookieStore = await cookies();
-  const cart = cookieStore.get('cart');
-  console.log(cart);
+  const cartItems = await getCartItems();
+  const itemsList = await hydrateCart(cartItems);
 
   return (
-    <>
-      <h1>Cart</h1>
-      <div>
-        <CartItem record={record} />
-      </div>
-    </>
+    <div>
+      <CartItemsList itemsList={itemsList} />
+    </div>
   );
 }
