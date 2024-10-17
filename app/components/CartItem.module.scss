@@ -1,0 +1,81 @@
+@use '../styles/mixins';
+@import '../styles/variables';
+
+.item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid $opaque-black;
+}
+
+.name-controls-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.controls-wrapper {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px $black;
+  padding: 0.5rem;
+
+  input {
+    font-size: 2rem;
+    background: $white;
+    border: none;
+    width: 4rem;
+    text-align: center;
+  }
+
+  button {
+    background: $white;
+    border: none;
+    font-size: 2rem;
+
+    &:hover {
+      opacity: 0.2;
+      cursor: pointer;
+    }
+  }
+}
+
+.item-wrapper-left {
+  display: flex;
+  gap: 1rem;
+}
+
+.item-wrapper-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+
+  .subtotal {
+    font-size: 1.25rem;
+  }
+
+  button {
+    width: fit-content;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: right;
+
+    &:hover {
+      color: red;
+      text-shadow: red 0 0 5px;
+    }
+
+    &:active {
+      transform: scale(0.7);
+    }
+  }
+}
+
+.item-title-wrapper {
+  font-size: 1.25rem;
+}

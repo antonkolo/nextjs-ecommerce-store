@@ -1,0 +1,7 @@
+@use '../../styles/mixins';
+@import '../../styles/variables';
+
+.wrapper {
+  @include mixins.page-wrapper;
+  display: flex;
+}

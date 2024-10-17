@@ -3,9 +3,15 @@ import Link from 'next/link';
 import React from 'react';
 import cartIcon from '../../public/svg/cart-icon.svg';
 import logo from '../../public/svg/logo.svg';
+import { getCartItems } from '../../util/cookies';
 import styles from './Header.module.scss';
 
-export default function Header() {
+export default async function Header() {
+  // get cart items quantity
+  const cartItemsCount = (await getCartItems()).reduce((acc, currVal) => {
+    return acc + currVal.quantity;
+  }, 0);
+
   return (
     <header className={styles.header}>
       <nav>
@@ -24,7 +30,9 @@ export default function Header() {
             <Link href="/cart">
               <div className={styles['cart-container']}>
                 <Image src={cartIcon} alt="Cart icon" />
-                <span className={styles.itemsCounter}>1</span>
+                <span className={styles.itemsCounter}>
+                  {cartItemsCount > 99 ? 'alot' : cartItemsCount}
+                </span>
               </div>
             </Link>
           </li>

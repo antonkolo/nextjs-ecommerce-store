@@ -1,0 +1,19 @@
+@use '../styles/mixins';
+@import '../styles/variables';
+
+.wrapper {
+  @include mixins.page-wrapper;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.cart-items-wrapper {
+  flex-basis: 670px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}

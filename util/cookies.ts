@@ -97,3 +97,26 @@ export async function decrementItemQuantity(recordId: number) {
   // set the cart cookeis to the adjusted value
   (await cookies()).set('cart', JSON.stringify(cartItems));
 }
+
+export async function setItemQuantity(recordId: number, quantity: number) {
+  const cartCookie = (await cookies()).get('cart');
+  if (!cartCookie) {
+    return;
+  }
+  const cartItems: { id: number; quantity: number }[] = JSON.parse(
+    cartCookie.value,
+  );
+
+  const itemToChange = cartItems.find((item) => item.id === recordId);
+  if (!itemToChange) {
+    return;
+  }
+
+  itemToChange.quantity = quantity;
+
+  (await cookies()).set('cart', JSON.stringify(cartItems));
+}
+
+export async function emptyCart() {
+  (await cookies()).set('cart', JSON.stringify([]));
+}
