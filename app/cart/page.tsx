@@ -9,12 +9,16 @@ export default async function CartPage() {
   const cartItems = await getCartItems();
   const itemsList = await hydrateCart(cartItems);
 
-  return (
-    <div className={styles.wrapper}>
-      <div className={styles['cart-items-wrapper']}>
-        <CartItemsList itemsList={itemsList} />
+  if (itemsList.length > 0) {
+    return (
+      <div className={styles.wrapper}>
+        <div className={styles['cart-items-wrapper']}>
+          <CartItemsList itemsList={itemsList} />
+        </div>
+        <OrderSummary itemsList={itemsList} />
       </div>
-      <OrderSummary itemsList={itemsList} />
-    </div>
-  );
+    );
+  } else {
+    return <p className={styles['empty-text']}>Cart is empty...🕳️</p>;
+  }
 }

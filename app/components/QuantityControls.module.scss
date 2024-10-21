@@ -47,24 +47,11 @@
 }
 
 .button-add {
+  @include mixins.button-base;
   flex-basis: 256px;
-  background-color: $yellow;
-  border: 1px solid $black;
-  text-transform: uppercase;
-  padding: 1rem 2rem;
   height: 60px;
-
-  &:hover {
-    cursor: pointer;
-  }
 
   @media (max-width: $breakpoint-tablet) {
     flex-basis: auto;
-  }
-
-  &:active {
-    transform: scale(0.98);
-
-    filter: saturate(150%);
   }
 }

@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { FormEvent } from 'react';
 import calculateTotal from '../../util/calculateTotal';
 import { type Props } from './CartItemsList';
+import styles from './OrderSummary.module.scss';
 
 export default function OrderSummary(props: Props) {
   const router = useRouter();
@@ -16,13 +17,13 @@ export default function OrderSummary(props: Props) {
 
   const total = calculateTotal(props.itemsList);
   return (
-    <div>
-      <div>
-        <h2>Total</h2>
-        <p>{total}</p>
+    <div className={styles.container}>
+      <div className={styles['total-wrapper']}>
+        <h2 className={styles.title}>Total</h2>
+        <p className={styles['price-text']}>{total}$</p>
       </div>
       <form onSubmit={handleSubmit}>
-        <button>Order now</button>
+        <button className={styles.button}>Order now</button>
       </form>
     </div>
   );

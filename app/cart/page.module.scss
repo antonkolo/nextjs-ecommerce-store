@@ -8,6 +8,10 @@
   flex-wrap: wrap;
   padding-left: 2rem;
   padding-right: 2rem;
+
+  @media (max-width: 1062px) {
+    justify-content: center;
+  }
 }
 
 .cart-items-wrapper {
@@ -16,4 +20,14 @@
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+
+  @media (max-width: 1062px) {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
+.empty-text {
+  font-family: var(--font-rubik-scribble);
+  font-size: 4rem;
 }
