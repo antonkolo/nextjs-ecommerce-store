@@ -5,7 +5,7 @@ import { addRecordToCart } from '../../util/cookies';
 import styles from './QuantityControls.module.scss';
 
 export default function QuantityControls({ recordId }: { recordId: number }) {
-  const [quantity, setQuantity] = useState<number | ''>(0);
+  const [quantity, setQuantity] = useState<number | ''>(1);
 
   // functions
   function incrementQuantity() {
@@ -35,6 +35,7 @@ export default function QuantityControls({ recordId }: { recordId: number }) {
           -
         </button>
         <input
+          data-test-id="product-quantity"
           value={quantity}
           onChange={(event) => {
             event.preventDefault();
@@ -52,7 +53,11 @@ export default function QuantityControls({ recordId }: { recordId: number }) {
         />
         <button onClick={incrementQuantity}>+</button>
       </div>
-      <button onClick={handleButtonClick} className={styles['button-add']}>
+      <button
+        data-test-id="product-add-to-cart"
+        onClick={handleButtonClick}
+        className={styles['button-add']}
+      >
         Add to cart
       </button>
     </div>

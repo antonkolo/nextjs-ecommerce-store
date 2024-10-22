@@ -27,10 +27,10 @@ export default async function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/cart">
+            <Link data-test-id="cart-link" href="/cart">
               <div className={styles['cart-container']}>
                 <Image src={cartIcon} alt="Cart icon" />
-                <span className={styles.itemsCounter}>
+                <span data-test-id="cart-count" className={styles.itemsCounter}>
                   {cartItemsCount > 99 ? '❕' : cartItemsCount}
                 </span>
               </div>

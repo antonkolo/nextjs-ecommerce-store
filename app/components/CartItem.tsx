@@ -62,7 +62,10 @@ export default function CartItem({ record }: { record: RecordWithQuantity }) {
   }
 
   return (
-    <div className={styles['item-wrapper']}>
+    <div
+      data-test-id={`cart-product-${record.id}`}
+      className={styles['item-wrapper']}
+    >
       <div className={styles['item-wrapper-left']}>
         <div>
           <Image
@@ -86,6 +89,7 @@ export default function CartItem({ record }: { record: RecordWithQuantity }) {
               -
             </button>
             <input
+              data-test-id={`cart-product-quantity-${record.id}`}
               value={quantity.toString()}
               onChange={handleQuantityChange}
               onBlur={handleQuantityBlur}
@@ -98,6 +102,7 @@ export default function CartItem({ record }: { record: RecordWithQuantity }) {
       </div>
       <div className={styles['item-wrapper-right']}>
         <button
+          data-test-id={`cart-product-remove-${record.id}`}
           onClick={async () => {
             await removeItemFromCookies(record.id);
           }}

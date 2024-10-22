@@ -20,10 +20,15 @@ export default function OrderSummary(props: Props) {
     <div className={styles.container}>
       <div className={styles['total-wrapper']}>
         <h2 className={styles.title}>Total</h2>
-        <p className={styles['price-text']}>{total}$</p>
+        <p className={styles['price-text']} data-test-id="cart-total">
+          {total}
+          <span>$</span>
+        </p>
       </div>
       <form onSubmit={handleSubmit}>
-        <button className={styles.button}>Order now</button>
+        <button data-test-id="cart-checkout" className={styles.button}>
+          Order now
+        </button>
       </form>
     </div>
   );

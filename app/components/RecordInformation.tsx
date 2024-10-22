@@ -17,7 +17,10 @@ export default function RecordInformation(props: Props) {
           <h1>{record.title}</h1>
           <strong>{record.artist}</strong>
         </div>
-        <p>{record.price}$</p>
+        <p data-test-id="product-price">
+          {record.price}
+          <span> $</span>
+        </p>
       </div>
 
       <p>{record.description}</p>

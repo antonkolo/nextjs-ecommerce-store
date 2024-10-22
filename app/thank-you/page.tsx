@@ -7,7 +7,7 @@ export default function ThankYouPage() {
   return (
     <div className={styles.container}>
       <div className={styles.banner}>
-        <p> Thank you!</p>
+        <p>Thank you for your order</p>
       </div>
       <div className={styles.background}>
         <Image

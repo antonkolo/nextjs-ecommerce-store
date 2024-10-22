@@ -18,6 +18,7 @@ export default async function ProductPage(props: Props) {
         <article className={styles['record-card']}>
           <div className={styles['image-wrapper']}>
             <Image
+              data-test-id="product-image"
               alt="Record sleeve photo"
               src={`/product-images/product-image-${record.id.toString()}.webp`}
               width={440}
