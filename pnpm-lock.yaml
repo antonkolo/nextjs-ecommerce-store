@@ -27,8 +27,8 @@ importers:
         specifier: 19.0.0-rc-2d16326d-20240930
         version: 19.0.0-rc-2d16326d-20240930(react@19.0.0-rc-2d16326d-20240930)
       react-player:
-        specifier: 3.0.0-canary.0
-        version: 3.0.0-canary.0(react@19.0.0-rc-2d16326d-20240930)
+        specifier: 3.0.0-canary.4
+        version: 3.0.0-canary.4(@types/react@18.3.11)(react-dom@19.0.0-rc-2d16326d-20240930(react@19.0.0-rc-2d16326d-20240930))(react@19.0.0-rc-2d16326d-20240930)
       sass:
         specifier: ^1.79.4
         version: 1.79.4
@@ -2357,10 +2357,12 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react-player@3.0.0-canary.0:
-    resolution: {integrity: sha512-g8r010vlfeCtt4Wxd7UA1RdXfvSK2KYu5k/HC4JS6IngynnV/Q0ODsIzzv6JguMaLl0I7ccPFj3juyEYTigvOg==}
+  react-player@3.0.0-canary.4:
+    resolution: {integrity: sha512-qaBI01hUzNic+TAbPOUMI0x2XItmmRsmRMWogescsb2RSsKVRnDJHFHmFqeO8Qvx+7RwWVw+p78JR0dTvBdHsQ==}
     peerDependencies:
-      react: '>=16.6.0'
+      '@types/react': ^17.0.0 || ^18
+      react: ^17.0.2 || ^18
+      react-dom: ^17.0.2 || ^18
 
   react@19.0.0-rc-2d16326d-20240930:
     resolution: {integrity: sha512-XeaCnXQ5lZoOtPaVZPDEcx2TUDDt6JPIEviTKhIBkQNAYKcQkAT6SPbEqxC2KqkLPnilvPi9zz+c8iikstrwRg==}
@@ -5451,13 +5453,15 @@ snapshots:
 
   react-is@16.13.1: {}
 
-  react-player@3.0.0-canary.0(react@19.0.0-rc-2d16326d-20240930):
+  react-player@3.0.0-canary.4(@types/react@18.3.11)(react-dom@19.0.0-rc-2d16326d-20240930(react@19.0.0-rc-2d16326d-20240930))(react@19.0.0-rc-2d16326d-20240930):
     dependencies:
+      '@types/react': 18.3.11
       deepmerge: 4.3.1
       load-script: 1.0.0
       memoize-one: 5.2.1
       prop-types: 15.8.1
       react: 19.0.0-rc-2d16326d-20240930
+      react-dom: 19.0.0-rc-2d16326d-20240930(react@19.0.0-rc-2d16326d-20240930)
       react-fast-compare: 3.2.2
 
   react@19.0.0-rc-2d16326d-20240930: {}
