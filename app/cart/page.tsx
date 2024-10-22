@@ -19,6 +19,10 @@ export default async function CartPage() {
       </div>
     );
   } else {
-    return <p className={styles['empty-text']}>Cart is empty...🕳️</p>;
+    return (
+      <div className={styles.wrapper}>
+        <p className={styles['empty-text']}>Cart is empty...🕳️</p>
+      </div>
+    );
   }
 }

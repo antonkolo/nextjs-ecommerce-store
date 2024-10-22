@@ -1,0 +1,50 @@
+@import '../styles/variables';
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  padding: 0 2rem;
+}
+
+.background {
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+
+  img {
+    position: absolute;
+
+    &:first-child {
+      left: 100px;
+    }
+
+    &:nth-child(2) {
+      left: 200px;
+    }
+
+    &:nth-child(3) {
+      left: 300px;
+    }
+  }
+}
+
+.banner {
+  margin: 0;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  padding: 2rem 4rem;
+  text-align: center;
+  box-shadow: $black 8px 12px;
+  background-color: white;
+  max-width: 1000px;
+
+  p {
+    font-family: var(--font-rubik-scribble);
+    font-size: 5rem;
+  }
+}

@@ -13,8 +13,11 @@ export default function CheckoutPage() {
   const total = calculateTotal(itemsList);
   return (
     <div className={styles.wrapper}>
-      <p>Total</p>
-      <p>{total}</p>
+      <div className={styles['total-wrapper']}>
+        <p>Total</p>
+        <p>{total}$</p>
+      </div>
+
       <CheckoutForm />
     </div>
   );

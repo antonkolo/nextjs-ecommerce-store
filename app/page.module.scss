@@ -1,0 +1,14 @@
+@use './styles/mixins';
+@import './styles/variables';
+
+.wrapper {
+  @include mixins.page-wrapper;
+
+  h1 {
+    font-family: var(--font-inter);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+  }
+}

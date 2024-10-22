@@ -31,7 +31,7 @@ export default async function Header() {
               <div className={styles['cart-container']}>
                 <Image src={cartIcon} alt="Cart icon" />
                 <span className={styles.itemsCounter}>
-                  {cartItemsCount > 99 ? 'alot' : cartItemsCount}
+                  {cartItemsCount > 99 ? '❕' : cartItemsCount}
                 </span>
               </div>
             </Link>

@@ -1,0 +1,37 @@
+@use '../styles/mixins';
+@import '../styles/variables';
+
+.form {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    legend {
+      font-weight: 1.25rem;
+      background-color: $black;
+      color: $white;
+      padding: 0.5rem;
+    }
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    input {
+      border: none;
+      border-bottom: 1px solid $opaque-black;
+    }
+  }
+
+  button {
+    @include mixins.button-base;
+  }
+}
