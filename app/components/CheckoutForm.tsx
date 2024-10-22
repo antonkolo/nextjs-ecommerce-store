@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import React, { FormEvent } from 'react';
+import React, { type FormEvent } from 'react';
 import { emptyCart } from '../../util/cookies';
 import styles from './CheckoutForm.module.scss';
 

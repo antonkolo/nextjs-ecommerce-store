@@ -1,20 +1,22 @@
 'use client';
 
-import dynamic from 'next/dynamic';
-import React from 'react';
+// import { useState } from 'react';
+// import dynamic from 'next/dynamic';
+import ReactPlayer from 'react-player';
 
 type Props = {
   soundcloudLink: string | null;
 };
 
-export default function Player(props: Props) {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  const DynamicPlayer = dynamic(() => import('react-player'), {
-    ssr: false,
-  });
+// export default function Player(props: Props) {
+//   const DynamicPlayer = dynamic(() => import('react-player'), {
+//     ssr: false,
+//   });
 
+export default function DynamicPlayer(props: Props) {
+  // const [hasWindow, setHasWindow] = useState(false);
   return (
-    <DynamicPlayer
+    <ReactPlayer
       style={{
         margin: 'auto 0',
       }}

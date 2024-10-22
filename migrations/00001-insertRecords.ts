@@ -1,4 +1,4 @@
-import { Sql } from 'postgres';
+import { type Sql } from 'postgres';
 
 const records = [
   {
@@ -91,7 +91,7 @@ const records = [
     releaseYear: '2024',
     price: 15,
     description:
-      "Some records you play so often that the sound will get worse and worse then when you actually want to grab a backup copy, it's frickin expensive... /nNot Anymore! Here we go, lucky number 3 we have Stefan Willenegger aka DJ Mastra with his Foyer EP, a nice blend between Tech House and Techno. /nGive it a listen, you surely heard it in a club near you!",
+      "Some records you play so often that the sound will get worse and worse then when you actually want to grab a backup copy, it's frickin expensive... \nNot Anymore! Here we go, lucky number 3 we have Stefan Willenegger aka DJ Mastra with his Foyer EP, a nice blend between Tech House and Techno. \nGive it a listen, you surely heard it in a club near you!",
     soundcloudLink:
       'https://www.youtube.com/watch?v=dOq4ScFgu3Q&ab_channel=TheOblong',
   },
