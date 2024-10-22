@@ -5,11 +5,9 @@ import hydrateCart from '../../../util/hydrateCart';
 import CheckoutForm from '../../components/CheckoutForm';
 import styles from './page.module.scss';
 
-const cartItems = await getCartItems();
-console.log('cartItems', cartItems);
-const itemsList = await hydrateCart(cartItems);
-
-export default function CheckoutPage() {
+export default async function CheckoutPage() {
+  const cartItems = await getCartItems();
+  const itemsList = await hydrateCart(cartItems);
   const total = calculateTotal(itemsList);
   return (
     <div className={styles.wrapper}>

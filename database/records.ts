@@ -1,5 +1,5 @@
 import { cache } from 'react';
-import { Record } from '../app/components/RecordsList';
+import { type Record } from '../app/components/RecordsList';
 import { sql } from './connect';
 
 export const getRecordInsecure = cache(async (recordId: Record['id']) => {
