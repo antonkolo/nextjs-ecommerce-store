@@ -17,7 +17,7 @@ export default async function Header() {
       <nav>
         <ul className={styles.nav}>
           <li>
-            <Link href="/">
+            <Link href="/" data-test-id="products-link">
               <Image src={logo} alt="Logo" className={styles.logo} />
             </Link>
           </li>
