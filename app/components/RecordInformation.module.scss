@@ -9,6 +9,7 @@
 
   @media (max-width: $breakpoint-tablet) {
     flex-basis: auto;
+    max-width: 495px;
   }
 
   .title-price-wrapper {

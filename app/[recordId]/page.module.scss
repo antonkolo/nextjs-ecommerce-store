@@ -3,7 +3,7 @@
 
 // single record page styles
 .wrapper {
-  @include mixins.page-wrapper;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,7 +15,8 @@
 .record-card {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
+  max-width: 1400px;
   gap: 2rem;
 
   @media (max-width: $breakpoint-tablet) {
