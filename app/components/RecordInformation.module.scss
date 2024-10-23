@@ -6,10 +6,8 @@
   flex-direction: column;
   gap: 1.5rem;
   flex-basis: 600px;
-  padding: 1rem;
 
   @media (max-width: $breakpoint-tablet) {
-    width: 80%;
     flex-basis: auto;
   }
 
