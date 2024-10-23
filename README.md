@@ -1,8 +1,10 @@
 # Online Record Shop built with next.js.
 
+A user can browse, records in stock, go the individual pages and prelisten tracks via embedded soundcloud / youtube. Records can be added to cart and ordered.
+
 ## Motivation
 
-This fullstack applicationo is meant as a learning project to get comfortable using react and next js.
+This fullstack application is meant as a learning project to get comfortable using react and next js.
 
 ## Features
 
@@ -14,11 +16,14 @@ This fullstack applicationo is meant as a learning project to get comfortable us
 ## Technologies
 
 - designed in figma
-- reacts.js
+- react.js
 - next.js
+- typescript
 - scss
 - css modules
 - postgres.js (database)
+- ley (migrations)
+- docker
 
 ## Setup
 
