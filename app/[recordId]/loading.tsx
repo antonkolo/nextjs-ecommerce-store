@@ -5,7 +5,7 @@ import styles from './loading.module.scss';
 
 export default function loading() {
   return (
-    <div className={styles.container}>
+    <div data-test-id="loading" className={styles.container}>
       <Image
         className={styles.img}
         alt="villalobos"
