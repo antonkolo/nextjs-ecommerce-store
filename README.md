@@ -1,6 +1,9 @@
 # Online Record Shop built with next.js.
 
 A user can browse, records in stock, go the individual pages and prelisten tracks via embedded soundcloud / youtube. Records can be added to cart and ordered.
+![products page](<Screenshot 2024-10-23 at 12.05.17.png>)
+![single product page](<Screenshot 2024-10-23 at 12.06.05.png>)
+![cart](<Screenshot 2024-10-23 at 12.06.26.png>)
 
 ## Motivation
 
