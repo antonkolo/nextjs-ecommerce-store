@@ -30,7 +30,7 @@ export default function RecordsList(props: Props) {
             <div className={styles['record-info-wrapper']}>
               <Link
                 href={`/${record.id}`}
-                data-test-id={`data-test-id="product-${record.id}`}
+                data-test-id={`product-${record.id}`}
               >
                 <Image
                   alt="Record sleeve photo"
